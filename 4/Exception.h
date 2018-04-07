@@ -1,3 +1,6 @@
+#pragma once 
+#include "headers.h"
+
 namespace Exception
 {
 	double div(double n, double d)

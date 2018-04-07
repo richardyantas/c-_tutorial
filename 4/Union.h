@@ -1,3 +1,6 @@
+#pragma once 
+#include "headers.h"
+
 namespace Union
 {
 	void test()

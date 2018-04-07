@@ -1,12 +1,10 @@
-#include<iostream>
-#include "Char.h"
-#include "Exception.h"
-#include "Union.h"
-using namespace std;
+#include "headers.h"
 
 // To compile: g++ -std=c++11 4.cpp && ./a.out
+// enum class works with -std=c++11
+  
 
-enum class opt{_CHAR_,_EXCEPTION_,_UNION_};
+enum class opt{_CHAR_,_EXCEPTION_,_UNION_,_POLYMORPHISM_,_INHERITANCE_,_INTERFACE_,_STL_,_TEMPLATES_};
 
 void option(opt c)
 {
@@ -27,10 +25,32 @@ void option(opt c)
 			Union::test();
 			break;
 		}
+
+		case opt::_POLYMORPHISM_:
+		{
+			Polymorphism::test();
+			break;
+		}
+		case opt::_INHERITANCE_:
+		{
+			Inheritance::test();
+		}
+		case opt::_INTERFACE_:
+		{
+			Interface::test();
+		}
+		case opt::_STL_:
+		{
+			Stl::test();
+		}
+		case opt::_TEMPLATES_:
+		{
+			Templates::test();
+		}
 	}
 } 
 
 int main()
 {
-	option(opt::_CHAR_);
+	option(opt::_STL_);
 }
